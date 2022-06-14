@@ -1,0 +1,21 @@
+.root {
+  width: 217px;
+  place-content: center;
+  padding: 4px 0 4px 8px;
+  position: absolute;
+  left: 606px;
+  top: 620.8593px;
+  outline: solid 1px #fff;
+  outline-offset: -1px;
+  border-radius: 50px;
+}
+.claimRewards {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  align-items: center;
+  white-space: nowrap;
+}

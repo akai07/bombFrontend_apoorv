@@ -1,0 +1,47 @@
+.root {
+  width: 107px;
+  height: 28px;
+  place-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 10px 4px 15px;
+  position: absolute;
+  left: 1108.8261px;
+  top: 1163.3007px;
+  outline: solid 1px #ffffff80;
+  outline-offset: -1px;
+  border-radius: 50px;
+}
+.purchase {
+  color: #ffffff80;
+  font-size: 15px;
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  align-items: center;
+  white-space: nowrap;
+}
+.group2945 {
+  opacity: 0.5;
+  z-index: 0;
+  width: 17.5949px;
+  height: 17.5949px;
+  position: relative;
+}
+.vector {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: visible;
+}
+.iconShoppingCart {
+  width: 10.9792px;
+  height: 10.9792px;
+  position: absolute;
+  left: 18.7931%;
+  right: 18.8068%;
+  top: 18.8014%;
+  bottom: 18.7985%;
+}

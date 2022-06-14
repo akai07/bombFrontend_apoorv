@@ -1,0 +1,28 @@
+.root {
+  width: 106px;
+  height: 28px;
+  place-content: center;
+  align-items: center;
+  gap: 19px;
+  padding: 4px 10px 4px 15px;
+  position: absolute;
+  left: 1108.623px;
+  top: 1216.3007px;
+  outline: solid 1px #fff;
+  outline-offset: -1px;
+  border-radius: 50px;
+}
+.redeem {
+  color: #fff;
+  font-size: 15px;
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  align-items: center;
+  white-space: nowrap;
+}
+.iconArrowDownCircle {
+  z-index: 0;
+  width: 21px;
+  height: 21px;
+}
