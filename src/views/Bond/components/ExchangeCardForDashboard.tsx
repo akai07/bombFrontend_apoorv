@@ -82,7 +82,7 @@ const ExchangeCardForDashboard: React.FC<ExchangeCardForDashboardProps> = ({
                   disabled={approveStatus === ApprovalState.PENDING || approveStatus === ApprovalState.UNKNOWN}
                   onClick={() => catchError(approve(), `Unable to approve ${fromTokenName}`)}
                 >
-                  {/* <div >Purchase11</div> */}
+                  <div >Purchase11</div>
                 </Button>
               ) : (
                 <Button

@@ -88,7 +88,7 @@ export const RedeemButtons2: FC<Props> = memo(function PurchaseButtons(props = {
     //  
   <button className={`${classes.root} ${props.className || ''}`} onClick={() => catchError(approve(), `Unable to approve `)} >
     
-      <div className={`${classes.purchase} ${props.classes?.purchase || ''}`}>Purchase</div>
+      <div className={`${classes.purchase} ${props.classes?.purchase || ''}`}>Purchase1</div>
       
       <IconArrowDownCircleIcon
         className={`${classes.iconArrowDownCircle} ${props.classes?.purchase || ''}`}
