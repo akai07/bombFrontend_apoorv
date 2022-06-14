@@ -8,8 +8,8 @@ You can start by reading our [Contribution guidelines](CONTRIBUTING.md) first.
 Install the dependencies
 
 ```shell
-yarn
-yarn start
+npm install
+npm start
 ```
 
 Make sure you've configured your IDE with `prettier`.
