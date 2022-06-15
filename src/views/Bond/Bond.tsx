@@ -22,7 +22,6 @@ import { Alert } from '@material-ui/lab';
 import HomeImage from '../../assets/img/background.jpg';
 import { Grid, Box } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
-import ExchangeCard1 from './components/ExchangeCard1';
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -95,7 +94,7 @@ const Bond: React.FC = () => {
           
             <StyledBond>
               <StyledCardWrapper>
-                <ExchangeCard1
+                <ExchangeCard
                   action="Purchase"
                   fromToken={bombFinance.BOMB}
                   fromTokenName="BOMB"

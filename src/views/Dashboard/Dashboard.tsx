@@ -49,7 +49,6 @@ import { Rectangle22664Icon } from './Rectangle22664Icon';
 import { Rectangle22665Icon } from './Rectangle22665Icon';
 import { Rectangle22704Icon } from './Rectangle22704Icon';
 import { RedeemButtons } from './RedeemButtons/RedeemButtons';
-import { RedeemButtons2 } from './RedeemButtons2/RedeemButtons2';
 import { Topology1Icon } from './Topology1Icon';
 import { VectorIcon } from './VectorIcon';
 import { WithdrawButtons2 } from './WithdrawButtons2/WithdrawButtons2';
@@ -77,6 +76,11 @@ import UnlockWallet from '../../components/UnlockWallet';
 import useBank from '../../hooks/useBank';
 
 import useStatsForPool from '../../hooks/useStatsForPool';
+import WithdrawModal from '../Stake/components/WithdrawModal';
+
+import useWithdrawFromBomb from '../../hooks/useWithdrawFromBomb';
+import useModal from '../../hooks/useModal';
+import { RedeemButtons2 } from './RedeemButtons2/RedeemButtons2';
 interface Props {
   className?: string;
   classes?: {
@@ -317,7 +321,18 @@ export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
     },
     [bombFinance, addTransaction],
   );
-  
+  const { onWithdraw } = useWithdrawFromBomb();
+  const stakedBalance = useTokenBalance(bombFinance.XBOMB);
+  const [onPresentWithdraw, onDismissWithdraw] = useModal(
+    <WithdrawModal
+      max={stakedBalance}
+      onConfirm={(value) => {
+        onWithdraw(value);
+        onDismissWithdraw();
+      }}
+      tokenName={'xBOMB'}
+    />,
+  );
   return (
     <div className={`${classes.root} ${props.className || ''}`}>
       <Topology1Icon className={`${classes.topology1} ${props.classes?.topology1 || ''}`} />
@@ -503,7 +518,7 @@ export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
       <div className={`${classes.bshares5} ${props.classes?.bshares5 || ''}`}></div>
       <div className={`${classes.frame679} ${props.classes?.frame679 || ''}`}>
         <div className={`${classes.readInvestmentStrategy} ${props.classes?.readInvestmentStrategy || ''}`}>
-          Read Investment Strategy
+        <a href="https://docs.bomb.money/welcome-start-here/strategies" >Read Investment Stratergy</a>
         </div>
         <VectorIcon className={`${classes.vector} ${props.classes?.vector || ''}`} />
       </div>
@@ -562,7 +577,7 @@ export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
       </div>
       <ClaimRewardsButtons />
       <ClaimRewardsButtons2 />
-      <WithdrawButtons2 />
+      <WithdrawButtons2></WithdrawButtons2>
       <DepositButtons2 />
       <div className={`${classes.bshares7} ${props.classes?.bshares7 || ''}`}></div>
       <div className={`${classes.earned64413298882} ${props.classes?.earned64413298882 || ''}`}>
@@ -604,7 +619,7 @@ export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
         </span>
       </div>
       <ClaimRewardsButtons3 />
-      <WithdrawButtons3 />
+      <WithdrawButtons3></WithdrawButtons3>
       <div className={`${classes.bSHAREBNB} ${props.classes?.bSHAREBNB || ''}`}>BSHARE-BNB</div>
       <div className={`${classes.bshareBnbLP3} ${props.classes?.bshareBnbLP3 || ''}`}></div>
       <Rectangle22704Icon className={`${classes.rectangle22704} ${props.classes?.rectangle22704 || ''}`} />
@@ -659,16 +674,16 @@ export const Dashboard: FC<Props> = memo(function Dashboard(props = {}) {
       <div className={`${classes.unity14} ${props.classes?.unity14 || ''}`}>Current Supply</div>
       <div className={`${classes.unity15} ${props.classes?.unity15 || ''}`}>Total Supply</div>
       <div className={`${classes.rectangle404} ${props.classes?.rectangle404 || ''}`}></div>
-      <div className={`${classes.chatOnDiscord} ${props.classes?.chatOnDiscord || ''}`}>Chat on Discord</div>
+      <div className={`${classes.chatOnDiscord} ${props.classes?.chatOnDiscord || ''}`}><a href="https://discord.bomb.money">Chat on Discord</a></div>
       <Ellipse303Icon className={`${classes.ellipse303} ${props.classes?.ellipse303 || ''}`} />
       <div className={`${classes.pw49459141} ${props.classes?.pw49459141 || ''}`}></div>
       <div className={`${classes.rectangle405} ${props.classes?.rectangle405 || ''}`}></div>
-      <div className={`${classes.readDocs} ${props.classes?.readDocs || ''}`}>Read Docs</div>
+      <div className={`${classes.readDocs} ${props.classes?.readDocs || ''}`}><a href="https://docs.bomb.money/welcome-start-here/readme">Read Docs</a></div>
       <Ellipse304Icon className={`${classes.ellipse304} ${props.classes?.ellipse304 || ''}`} />
       <div className={`${classes.ww29911061} ${props.classes?.ww29911061 || ''}`}></div>
       <div className={`${classes.rectangle22701} ${props.classes?.rectangle22701 || ''}`}></div>
       <div className={`${classes.rectangle22702} ${props.classes?.rectangle22702 || ''}`}></div>
-      <div className={`${classes.investNow} ${props.classes?.investNow || ''}`}>Invest Now</div>
+      <div className={`${classes.investNow} ${props.classes?.investNow || ''}`}><a href="https://www.bomb.money/">Invest Now</a></div>
       <div className={`${classes.tVL1084303} ${props.classes?.tVL1084303 || ''}`}>
         <span className={classes.labelWrapper19}>
           <span className={classes.label46}>TVL: </span>
