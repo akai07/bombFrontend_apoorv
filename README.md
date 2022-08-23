@@ -1,3 +1,7 @@
+#Web3 Assginment for Dyeus / Myriad
+- Added Dashboard with all the Figma Design provided with working backend 
+
+
 # 🪦Welcome to the Bomb.money ecosystem🪦
 
 Thanks for taking the time to contribute!
